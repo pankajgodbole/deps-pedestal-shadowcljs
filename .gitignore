@@ -1,0 +1,8 @@
+# Directories
+.cpcache/
+
+# Files
+.nrepl-port
+
+# Emacs backups
+*.*~
