@@ -19,7 +19,7 @@
   (defn all-drugs
   ""
   [_]
-  (iph/json-response (opdsd/tbl_drugs pf-drugs-db-config))))
+  (iph/json-response (opdsd/drugs pf-drugs-db-config))))
 
 (comment
   (do

@@ -8,4 +8,4 @@
 -- :name drugs :? :*                    (:name -the name of the function, :? :* - to return a list of results)
 -- :doc  Returns the names of all drugs ()
 --
-SELECT * FROM tbl_drugs;
+SELECT * FROM drugs;
