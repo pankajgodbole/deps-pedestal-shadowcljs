@@ -12,7 +12,9 @@
   ""
   [_request]
   {:status 200
-   :body   "Hello World! 4"})
+   :body   "Hello World! 5"})
+
+(hc/def-db-fns "org/progfun/deps_pedestal_shadowcljs/sql/drugs.sql")
 
 (defn drugs-sql->fns
   ""

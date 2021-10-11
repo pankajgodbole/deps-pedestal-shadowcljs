@@ -8,18 +8,20 @@
 (ns org.progfun.deps-pedestal-shadowcljs.drugs
   (:require [io.pedestal.http                               :as    iph]
             [org.progfun.deps-pedestal-shadowcljs.config    :refer [pf-drugs-db-config]]
-            [org.progfun.deps-pedestal-shadowcljs.sql.drugs :as    opdsd]))
+            [org.progfun.deps-pedestal-shadowcljs.sql.drugs :as    opdsd] :reload))
 
 (defn call-hello
   ""
   [_]
   (opdsd/pf-hello-response))
 
-(comment
-  (defn all-drugs
+(defn all-drugs
   ""
   [_]
-  (iph/json-response (opdsd/drugs pf-drugs-db-config))))
+  (iph/json-response (opdsd/drugs pf-drugs-db-config)))
+
+(comment
+  )
 
 (comment
   (do

@@ -10,5 +10,5 @@
   {:classname   "org.postgresql.Driver"
    :subprotocol "postgresql"
    :subname     "//localhost:5432/drugstore"
-   :user        "p"
-   :password    ""})
+   :user        "postgres"
+   :password    "pgpswd"})
