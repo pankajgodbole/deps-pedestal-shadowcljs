@@ -12,13 +12,13 @@
   ""
   [_request]
   {:status 200
-   :body   "Hello World! 8"})
+   :body   "Hello World! 9"})
 
 (def pf-routes
   ""
   #{;;["/hello" :get `pf-hello-response]
     ["/hello" :get org.progfun.deps-pedestal-shadowcljs.sql.drugs/pf-hello-response :route-name :say-hello]
-    ;;["/drugs" :get org.progfun.deps-pedestal-shadowcljs.drugs/all-drugs :route-name :get-drugs]
+    ["/drugs" :get org.progfun.deps-pedestal-shadowcljs.drugs/all-drugs :route-name :get-drugs]
     })
 
 (def pf-service-map

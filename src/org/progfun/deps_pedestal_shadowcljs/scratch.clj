@@ -44,3 +44,10 @@
   :price 8.0}
  {:id 9, :name "Zofran (ondansetron)", :availability 40, :price 17.0}
  {:id 10, :name "Motrin (ibuprofen)", :availability 70, :price 12.0}))
+
+(clj-jdbc/query pg-db
+                ["SELECT * FROM drugs WHERE id=1"])
+#_({:id 1,
+  :name "Vicodin, Norco, Xodol (hydrocodone, acetaminophen)",
+  :availability 100,
+  :price 14.0})
