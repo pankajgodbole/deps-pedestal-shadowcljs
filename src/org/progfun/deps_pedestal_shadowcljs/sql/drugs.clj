@@ -12,14 +12,9 @@
   ""
   [_request]
   {:status 200
-   :body   "Hello World! 5"})
+   :body   "Hello World! 6"})
 
 (hc/def-db-fns "org/progfun/deps_pedestal_shadowcljs/sql/drugs.sql")
-
-(defn drugs-sql->fns
-  ""
-  []
-  (hc/def-db-fns "org/progfun/deps_pedestal_shadowcljs/sql/drugs.sql"))
 
 (comment
   (require '[hugsql.core :as hc]))

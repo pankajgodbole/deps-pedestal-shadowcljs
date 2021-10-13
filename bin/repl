@@ -1,0 +1,1 @@
+clj -A:run/cider-nrepl -M -m nrepl.cmdline --middleware [cider.nrepl/cider-middleware]
