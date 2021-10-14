@@ -21,6 +21,7 @@
              org.postgresql/postgresql    #:mvn{:version "42.2.24"}
              org.clojure/java.jdbc        #:mvn{:version "0.7.12"}
              ;;clojure.jdbc/clojure.jdbc    #:mvn{:version "0.4.0"}
+             org.clojure/spec.alpha       #:mvn{:version "0.2.194"}
              }
 
  :paths     ["src" "resources"]

@@ -3,7 +3,7 @@
 ;;
 
 (ns user
-  (:require [io.pedestal.http                          :as    iphttp]
+  (:require [io.pedestal.http                          :as    iph]
             [clojure.tools.namespace.repl              :refer [refresh]]
             [org.progfun.deps-pedestal-shadowcljs.core :refer [pf-service-map]]))
 
@@ -13,8 +13,8 @@
 (defn pf-start!
   "Starts the server"
   []
-  (reset! pf-server (iphttp/start (iphttp/create-server
-                                   (assoc pf-service-map ::iphttp/join? false))))
+  (reset! pf-server (iph/start (iph/create-server
+                                   (assoc pf-service-map ::iph/join? false))))
   (prn "Server started on localhost:8890")
   (prn "Enter (reset) to reload ...")
   :started)
@@ -22,11 +22,11 @@
 (defn pf-stop!
   "Stop the development server"
   []
-  (iphttp/stop @pf-server))
+  (iph/stop @pf-server))
 
 (comment (swap! pf-server (fn [server]
                      (when server
-                       (iphttp/stop server))
+                       (iph/stop server))
                             nil)))
 
 (defn pf-reset-service
